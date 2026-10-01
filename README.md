@@ -6,6 +6,9 @@ Este projeto é uma aplicação em Java desenvolvida para a disciplina de Pesqui
 - **Número de Trocas (Movimentações):** Quantas vezes os elementos mudam de posição no vetor durante a ordenação.
 - **Tempo de Execução (ms):** O tempo real de processamento do algoritmo, medido em milissegundos com precisão de casas decimais.
 
+Desenvolvido por : Érika Pimenta, Gabriela Nascimento e Laysa
+Professora responsável : Renata Laranja Lima
+
 ## 🚀 Algoritmos Implementados
 
 Os algoritmos avaliados neste projeto são:
