@@ -24,7 +24,7 @@ public class ArvoreBinaria {
 			return pesquisa(elem, no.getDir());
 		}
 
-		// Se não é menor nem maior, é igual. Achamos o nó!
+		// Se não é menor nem maior, é igual. Achamos o nó
 		return no;
 	}
 
@@ -94,7 +94,7 @@ public class ArvoreBinaria {
 		return R;
 	}
 
-	// --- MUDANÇAS AQUI ---
+	
 
 	public int[] CamCentral() {
 		// Cria o vetor com o tamanho exato da quantidade de elementos na árvore
@@ -139,7 +139,7 @@ public class ArvoreBinaria {
 		}
 	}
 
-	// --- FIM DAS MUDANÇAS ---
+
 
 	static int maior(int v[]) {
 		int maior = 0;

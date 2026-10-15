@@ -1,8 +1,6 @@
 package algoritmos.busca;
 
 /**
- * Implementação de Tabela de Dispersão (Hash Table) com Endereçamento Aberto (Sondagem Linear).
- * Segue a abordagem apresentada no slide 17 da Profa. Renata Laranja:
  * - Função Hash: Método da Divisão h(k) = k mod M.
  * - Tratamento de Colisões: Sondagem Linear circular i = (i + 1) % M.
  */

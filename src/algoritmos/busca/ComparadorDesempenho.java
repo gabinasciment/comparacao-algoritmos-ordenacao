@@ -2,11 +2,6 @@ package algoritmos.busca;
 
 import java.util.Arrays;
 
-/**
- * Responsável pela Análise Comparativa de Desempenho (Parte 3 do Edital).
- * Compara a eficiência da Pesquisa Sequencial Simples versus a Pesquisa Binária
- * para um mesmo valor chave, registrando número de comparações e tempo de execução.
- */
 public class ComparadorDesempenho {
 
     public static class RelatorioComparativo {
@@ -32,7 +27,7 @@ public class ComparadorDesempenho {
             System.out.println("--------------------------------------------------------------------------");
             System.out.printf("%-30s | %-12s | %-15s | %-15s\n",
                     "Algoritmo", "Encontrado?", "Comparações", "Tempo (ms)");
-            System.out.println("--------------------------------------------------------------------------");
+            System.out.println();
 
             System.out.printf("%-30s | %-12s | %-15d | %-15.6f\n",
                     "Pesquisa Sequencial Simples",
@@ -46,29 +41,29 @@ public class ComparadorDesempenho {
                     resultadoBinario.getComparacoes(),
                     resultadoBinario.getTempoExecucaoMs());
 
-            System.out.println("--------------------------------------------------------------------------");
+            System.out.println();
             System.out.println("VEREDITO DE EFICIÊNCIA:");
 
             long diffComp = resultadoSequencial.getComparacoes() - resultadoBinario.getComparacoes();
             if (diffComp > 0) {
-                System.out.printf("-> A Pesquisa Binária foi MAIS EFICIENTE em comparações, economizando %d comparações!\n", diffComp);
+                System.out.printf(" A Pesquisa Binária foi mais em comparações, economizando %d comparações!\n", diffComp);
                 System.out.println("   Justificativa teórica: A Pesquisa Binária tem complexidade O(log n), enquanto a");
                 System.out.println("   Pesquisa Sequencial tem complexidade O(n) no caso médio/pior caso.");
             } else if (diffComp < 0) {
-                System.out.println("-> A Pesquisa Sequencial realizou menos comparações nesta execução específica");
-                System.out.println("   (Caso onde o elemento estava nas primeiríssimas posições do vetor).");
+                System.out.println("-A Pesquisa Sequencial realizou menos comparações nesta execução específica");
             } else {
-                System.out.println("-> Ambos os algoritmos realizaram o mesmo número de comparações neste caso pontual.");
+                System.out.println("Ambos os algoritmos realizaram o mesmo número de comparações neste caso pontual.");
             }
 
             if (resultadoBinario.getTempoExecucaoMs() < resultadoSequencial.getTempoExecucaoMs()) {
-                System.out.println("-> A Pesquisa Binária concluiu a execução em menor tempo.");
+                System.out.println("A Pesquisa Binária concluiu a execução em menor tempo.");
             } else if (resultadoBinario.getTempoExecucaoMs() > resultadoSequencial.getTempoExecucaoMs()) {
-                System.out.println("-> A Pesquisa Sequencial Simples concluiu em menor tempo neste caso.");
+                System.out.println("A Pesquisa Sequencial Simples concluiu em menor tempo neste caso.");
             } else {
-                System.out.println("-> Os tempos foram equivalentes para a precisão medida.");
+                System.out.println("Os tempos foram equivalentes para a precisão medida.");
             }
             System.out.println("==========================================================================\n");
+            System.out.println();
         }
     }
 

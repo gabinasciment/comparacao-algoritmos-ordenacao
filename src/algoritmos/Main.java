@@ -4,13 +4,6 @@ import algoritmos.busca.MenuPesquisa;
 import java.io.IOException;
 import java.util.Scanner;
 
-/**
- * Ponto de entrada principal da aplicação integrado.
- * Permite alternar entre os módulos de:
- * 1. Algoritmos de Pesquisa de Dados (Trabalho C2.A2 - Novo Edital)
- * 2. Algoritmos de Ordenação de Dados (Trabalho C1 - Anterior)
- * 3. Geração de Arquivos de Teste (.txt)
- */
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -19,7 +12,7 @@ public class Main {
             System.out.println("\n==============================================================");
             System.out.println("   SISTEMA DE PESQUISA E ORDENAÇÃO DE DADOS - FAESA");
             System.out.println("==============================================================");
-            System.out.println("1. [NOVO] Algoritmos de Pesquisa de Dados (Trabalho C2.A2)");
+            System.out.println("1.Algoritmos de Pesquisa de Dados");
             System.out.println("2. Algoritmos de Ordenação de Dados (Trabalho C1)");
             System.out.println("3. Gerar Arquivos de Teste (100, 1000, 10000 números)");
             System.out.println("0. Sair do Programa");
@@ -40,10 +33,10 @@ public class Main {
                 try {
                     FileHandler.gerarArquivosDeTeste();
                 } catch (IOException e) {
-                    System.out.println("❌ Erro ao gerar arquivos: " + e.getMessage());
+                    System.out.println("Erro ao gerar arquivos: " + e.getMessage());
                 }
             } else {
-                System.out.println("❌ Opção inválida. Tente novamente.");
+                System.out.println("Opção inválida. Tente novamente.");
             }
         }
         
@@ -58,9 +51,9 @@ public class Main {
         int[] vetorOriginal;
         try {
             vetorOriginal = FileHandler.lerArquivo(arquivoEntrada);
-            System.out.println("-> Arquivo lido com sucesso! Total de elementos: " + vetorOriginal.length);
+            System.out.println("Arquivo lido com sucesso! Total de elementos: " + vetorOriginal.length);
         } catch (IOException e) {
-            System.out.println("❌ Erro ao ler o arquivo: " + e.getMessage());
+            System.out.println("Erro ao ler o arquivo: " + e.getMessage());
             return;
         }
         
@@ -107,7 +100,7 @@ public class Main {
                 System.out.println("❌ Opção inválida.");
                 return;
         }
-        
+        System.out.println();
         System.out.println("\n===========================================");
         System.out.println("   RESULTADOS - " + nomeAlgoritmo.toUpperCase());
         System.out.println("===========================================");
@@ -115,6 +108,7 @@ public class Main {
         System.out.println("Número de Trocas (Movimentações): " + resultado.getTrocas());
         System.out.println("Tempo de Execução: " + String.format("%.6f", resultado.getTempoExecucao()) + " ms");
         System.out.println("===========================================");
+        System.out.println();
         
         System.out.print("\nDeseja salvar o resultado ordenado em um arquivo? (S/N): ");
         String salvar = scanner.nextLine().trim();
@@ -123,9 +117,9 @@ public class Main {
             String arquivoSaida = scanner.nextLine().trim();
             try {
                 FileHandler.salvarArquivo(arquivoSaida, resultado.getVetor());
-                System.out.println("-> Arquivo salvo com sucesso!");
+                System.out.println("Arquivo salvo com sucesso!");
             } catch (IOException e) {
-                System.out.println("❌ Erro ao salvar o arquivo: " + e.getMessage());
+                System.out.println(" Erro ao salvar o arquivo: " + e.getMessage());
             }
         }
     }

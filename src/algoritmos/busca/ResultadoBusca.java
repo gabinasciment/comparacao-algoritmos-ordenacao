@@ -1,10 +1,5 @@
 package algoritmos.busca;
 
-/**
- * Classe responsável por armazenar os resultados de uma operação de busca.
- * Armazena a posição do elemento encontrado (ou -1), indicador booleano de sucesso,
- * quantidade de comparações realizadas, tempo de execução (em ms) e detalhes contextuais.
- */
 public class ResultadoBusca {
     private final int posicao;
     private final boolean encontrado;
@@ -48,9 +43,9 @@ public class ResultadoBusca {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         if (encontrado) {
-            sb.append("-> Elemento ENCONTRADO na posição (índice): ").append(posicao).append("\n");
+            sb.append("-Elemento encontrado na posição : ").append(posicao).append("\n");
         } else {
-            sb.append("-> Elemento NÃO ENCONTRADO no vetor.\n");
+            sb.append("-> Elemento não encontrado no vetor.\n");
         }
         sb.append(String.format("-> Comparações realizadas: %d\n", comparacoes));
         sb.append(String.format("-> Tempo de execução: %.6f ms", tempoExecucaoMs));

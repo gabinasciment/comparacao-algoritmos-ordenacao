@@ -5,7 +5,6 @@ import java.util.LinkedList;
 
 /**
  * Implementação de Tabela de Dispersão (Hash Table) com Encadeamento Separado.
- * Segue a abordagem apresentada no material de aula da Profa. Renata Laranja:
  * - Função Hash: Método da Divisão h(k) = k mod M (utilizando Math.floorMod para tratamento de negativos).
  * - Tratamento de Colisões: Encadeamento separado (cada índice da tabela guarda uma LinkedList<Integer>).
  * - Métricas de Busca: Conta comparações de chaves e tempo de execução.
@@ -15,13 +14,10 @@ public class TabelaHashEncadeada {
     private final int m; // Tamanho da tabela (idealmente número primo)
     private int totalElementos;
 
-    /**
-     * Construtor com tamanho explícito m.
-     * @param m tamanho da tabela hash (número de slots/baldes)
-     */
+    
     public TabelaHashEncadeada(int m) {
         if (m <= 0) {
-            m = 11; // Padrão mínimo seguro
+            m = 11;
         }
         this.m = m;
         this.tabela = new ArrayList<>(m);
@@ -34,7 +30,6 @@ public class TabelaHashEncadeada {
     /**
      * Construtor que cria a tabela com base em um vetor de dados,
      * calculando automaticamente um número primo adequado para o tamanho da tabela.
-     * @param dados vetor de dados inteiros
      */
     public TabelaHashEncadeada(int[] dados) {
         this(calcularTamanhoPrimoIdeal(dados != null ? dados.length : 11));
@@ -87,11 +82,7 @@ public class TabelaHashEncadeada {
     }
 
     /**
-     * Realiza a busca detalhada coletando métricas de desempenho (tempo e comparações).
-     *
-     * @param chave valor a ser procurado
-     * @return ResultadoBusca com detalhes sobre o bucket, comparações e tempo
-     */
+     * Realiza a busca detalhada coletando métricas de desempenho (tempo e comparações). */
     public ResultadoBusca buscarComMetricas(int chave) {
         long inicio = System.nanoTime();
         int endereco = hash(chave);

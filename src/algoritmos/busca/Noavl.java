@@ -10,7 +10,7 @@ public class Noavl {
 		this.info = info;
 		this.esq = null;
 		this.dir = null;
-		this.altura = 0; // Por padrão, a altura de uma folha é 0
+		this.altura = 0; //
 	}
 
 	public int getInfo() {

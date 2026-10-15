@@ -77,9 +77,7 @@ public class ArvoreAvl {
 		return no;
 	}
 
-	// ==========================================
-	// PESQUISA
-	// ==========================================
+
 
 	public boolean pesquisa(int elem) {
 		return pesquisa(elem, this.raiz) != null;
@@ -98,9 +96,7 @@ public class ArvoreAvl {
 		return no;
 	}
 
-	// ==========================================
-	// INSERÇÃO
-	// ==========================================
+
 
 	public boolean insere(int elem) {
 		if (pesquisa(elem)) {
@@ -126,9 +122,8 @@ public class ArvoreAvl {
 		return rebalancear(no);
 	}
 
-	// ==========================================
-	// REMOÇÃO
-	// ==========================================
+
+
 
 	public boolean remove(int chave) {
 		if (!pesquisa(chave)) {
@@ -173,9 +168,7 @@ public class ArvoreAvl {
 		return no;
 	}
 
-	// ==========================================
-	// CAMINHAMENTOS
-	// ==========================================
+	
 
 	public int[] CamCentral() {
 		int[] vetOrdenado = new int[this.nElem];
