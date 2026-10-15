@@ -1,4 +1,4 @@
-package unidade3;
+package algoritmos.busca;
 public class No {
 	private int info;
 	private No esq, dir;

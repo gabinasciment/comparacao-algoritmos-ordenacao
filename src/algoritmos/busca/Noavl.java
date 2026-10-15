@@ -1,4 +1,4 @@
-package unidade3;
+package algoritmos.busca;
 
 public class Noavl {
 	private int info;
